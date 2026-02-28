@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+:root{
+  /* Claude-like warm background + neutrals */
+  --bg: #f7f6f2;          /* warm off-white */
+  --surface: #ffffff;     /* cards */
+  --text: #111111;        /* near-black text */
+  --muted: #4b4b4b;       /* paragraph text */
+  --line: rgba(0,0,0,.10);
+
+  /* Buttons */
+  --btn: #111111;         /* primary black */
+  --btnText: #ffffff;
+  --btnHover: #000000;
+
+  --btn2: #efeeea;        /* secondary soft gray */
+  --btn2Text: #111111;
+  --btn2Border: rgba(0,0,0,.12);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
 }
