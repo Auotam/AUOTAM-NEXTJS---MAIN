@@ -1,5 +1,5 @@
 import "./globals.css"
-import Container from "../ui/Container"
+import Header from "../components/layout/Header"
 
 export const metadata = {
   title: "AUOTAM",
