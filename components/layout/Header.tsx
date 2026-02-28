@@ -1,58 +1,44 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import Link from "next/link"
 import Container from "../ui/Container"
+import Link from "next/link"
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-md border-b border-gray-200"
-          : "bg-white"
-      }`}
-    >
+    <header className="bg-[#fff1f2] sticky top-0 z-50">
       <Container>
-        <div className="flex items-center justify-between h-16 text-sm font-medium">
-          
+        <div className="flex items-center justify-between py-5">
+
           {/* Logo */}
-          <Link
-            href="/"
-            className="font-bold text-lg tracking-tight text-black"
-          >
+          <Link href="/" className="text-xl font-semibold tracking-tight">
             AUOTAM
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm text-black">
-            <Link href="#what-we-build" className="hover:opacity-70 transition">
-              What We Build
-            </Link>
-            <Link href="#industries" className="hover:opacity-70 transition">
-              Industries
-            </Link>
-            <Link href="#work" className="hover:opacity-70 transition">
-              Work
-            </Link>
-            <Link href="#about" className="hover:opacity-70 transition">
-              About
-            </Link>
-            <Link href="#contact" className="hover:opacity-70 transition">
-              Contact
-            </Link>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex items-center gap-8 text-sm">
+            <Link href="#what-we-build">What We Build</Link>
+            <Link href="#industries">Industries</Link>
+            <Link href="#work">Work</Link>
+            <Link href="#about">About</Link>
+            <Link href="#contact">Contact</Link>
+
+            <a
+              href="https://calendly.com/auotam/meeting"
+              target="_blank"
+              className="ml-4 px-5 py-2 bg-[#b91c1c] text-white rounded-full text-sm font-medium hover:bg-[#991b1b] transition"
+            >
+              Book a Call
+            </a>
           </nav>
+
+          {/* Mobile CTA only */}
+          <div className="md:hidden">
+            <a
+              href="https://calendly.com/auotam/meeting"
+              target="_blank"
+              className="px-4 py-2 bg-[#b91c1c] text-white rounded-full text-xs font-medium"
+            >
+              Book
+            </a>
+          </div>
 
         </div>
       </Container>
