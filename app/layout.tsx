@@ -1,26 +1,24 @@
-"use client"
+import "./globals.css"
+import Header from "../components/layout/Header"
 
-import Link from "next/link"
-import Container from "../ui/Container"
+export const metadata = {
+  title: "AUOTAM",
+  description: "Systems. Automation. Technology.",
+}
 
-export default function Header() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
-      <Container>
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="font-bold text-lg tracking-tight">
-            AUOTAM
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link href="#">What We Build</Link>
-            <Link href="#">Industries</Link>
-            <Link href="#">Work</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
-          </nav>
+    <html lang="en">
+      <body>
+        <Header />
+        <div className="pt-16">
+          {children}
         </div>
-      </Container>
-    </header>
+      </body>
+    </html>
   )
 }
