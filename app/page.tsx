@@ -1,46 +1,39 @@
-import Container from "../components/ui/Container"
-import Section from "../components/ui/Section"
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
-    <main className="bg-[#fff1f2] min-h-screen">
-      <Section>
+    <main className="min-h-screen">
+      <section className="pt-28 pb-24">
         <Container>
-          <div className="max-w-3xl pt-28 pb-24">
-
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight text-black mb-8">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.02]">
               Systems That Make
               <br />
               Growth Predictable.
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl leading-relaxed">
-              We design operational systems, intelligent automation,
-              and digital infrastructure that eliminate chaos and
-              make growth scalable.
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[var(--muted)] max-w-2xl">
+              We design operational systems, intelligent automation, and digital
+              infrastructure that eliminate chaos and make growth scalable.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href="https://calendly.com/auotam/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-[#b91c1c] text-white rounded-full text-sm font-medium hover:bg-[#991b1b] transition"
               >
-                Book a Systems Discovery Call
+                <Button variant="primary">Book a Systems Discovery Call</Button>
               </a>
 
-              <a
-                href="#what-we-build"
-                className="px-6 py-3 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 transition"
-              >
-                Explore Systems
+              <a href="/what-we-build">
+                <Button variant="secondary">Explore Systems</Button>
               </a>
             </div>
-
           </div>
         </Container>
-      </Section>
+      </section>
     </main>
-  )
+  );
 }
