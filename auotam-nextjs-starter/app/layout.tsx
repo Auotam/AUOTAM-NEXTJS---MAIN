@@ -1,12 +1,19 @@
+import "./globals.css"
+
 export const metadata = {
-  title: 'AUOTAM — Systems That Make Growth Predictable',
-  description: 'AUOTAM builds operational systems, intelligent automation, and digital infrastructure.'
+  title: "AUOTAM — Systems That Make Growth Predictable",
+  description:
+    "AUOTAM builds operational systems, intelligent automation, and digital infrastructure.",
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: 'Inter, sans-serif', background: '#faf6f6' }}>
+      <body className="bg-background text-black antialiased">
         {children}
       </body>
     </html>
