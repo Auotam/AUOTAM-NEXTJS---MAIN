@@ -1,9 +1,9 @@
 import "./globals.css"
+import Header from "@/components/layout/Header"
 
 export const metadata = {
-  title: "AUOTAM — Systems That Make Growth Predictable",
-  description:
-    "AUOTAM builds operational systems, intelligent automation, and digital infrastructure.",
+  title: "AUOTAM",
+  description: "Systems. Automation. Technology.",
 }
 
 export default function RootLayout({
@@ -13,8 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-background text-black antialiased">
-        {children}
+      <body>
+        <Header />
+        <div className="pt-16">
+          {children}
+        </div>
       </body>
     </html>
   )
