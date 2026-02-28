@@ -1,7 +1,6 @@
 export default function Home() {
   return (
-    <main style={{ padding: '80px 24px', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1 style={{ fontSize: '48px', lineHeight: '1.2', marginBottom: '24px' }}>
+<main className="bg-[#f7f7f5] min-h-screen">      <h1 style={{ fontSize: '48px', lineHeight: '1.2', marginBottom: '24px' }}>
         Systems That Make Growth Predictable.
       </h1>
       <p style={{ fontSize: '20px', color: '#444', marginBottom: '32px' }}>
