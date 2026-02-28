@@ -1,27 +1,46 @@
+import Container from "../components/ui/Container"
+import Section from "../components/ui/Section"
+
 export default function Home() {
   return (
-<main className="bg-[#f7f7f5] min-h-screen">      <h1 style={{ fontSize: '48px', lineHeight: '1.2', marginBottom: '24px' }}>
-        Systems That Make Growth Predictable.
-      </h1>
-      <p style={{ fontSize: '20px', color: '#444', marginBottom: '32px' }}>
-        We design operational systems, intelligent automation, and digital infrastructure
-        that eliminate chaos and make growth scalable.
-      </p>
-      <a 
-        href="https://calendly.com/auotam/meeting"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          padding: '14px 28px',
-          background: '#b91c1c',
-          color: '#fff',
-          textDecoration: 'none',
-          borderRadius: '6px',
-          fontWeight: '600'
-        }}
-      >
-        Book a Systems Discovery Call
-      </a>
+    <main className="bg-[#f7f7f5] min-h-screen">
+      <Section>
+        <Container>
+          <div className="max-w-3xl pt-32 pb-24">
+
+            <h1 className="text-6xl md:text-7xl font-semibold leading-tight tracking-tight text-black mb-8">
+              Systems That Make
+              <br />
+              Growth Predictable.
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
+              We design operational systems, intelligent automation,
+              and digital infrastructure that eliminate chaos and
+              make growth scalable.
+            </p>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://calendly.com/auotam/meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-black text-white rounded-full text-sm font-medium hover:opacity-80 transition"
+              >
+                Book a Systems Discovery Call
+              </a>
+
+              <a
+                href="#what-we-build"
+                className="px-6 py-3 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 transition"
+              >
+                Explore Systems
+              </a>
+            </div>
+
+          </div>
+        </Container>
+      </Section>
     </main>
   )
 }
